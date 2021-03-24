@@ -43,11 +43,13 @@ function run() {
         try {
             const channel = core.getInput('channel') || 'stable';
             if (channel == 'master') {
-                core.setFailed('using `flutter-version` with master channel is not supported.');
+                core.setFailed('using `latest-flutter-version-action` with master channel is not supported.');
                 return;
             }
             const platform = release.getPlatform();
+            core.info(`Searching for latest version in ${channel} channel`);
             const { version: selectedVersion, downloadUrl, channel: validatedChannel, } = yield release.determineVersion('', channel, platform);
+            core.info(`Found version for ${channel} channel: ${selectedVersion}`);
             core.setOutput('version', selectedVersion);
         }
         catch (error) {

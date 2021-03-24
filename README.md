@@ -11,9 +11,8 @@ can turn around and use this version as a cache key.
 ```yaml
 steps:
 - id: flutter-version
-  uses: shyndman/latest-flutter-version-action@v1
+  uses: shyndman/latest-flutter-version-action@v1.0.2
   with:
     channel: 'dev'
-- needs: steps.flutter-version
-  runs: echo ${{ steps.flutter-version.outputs.version }}
+- runs: echo ${{ steps.flutter-version.outputs.version }}
 ```

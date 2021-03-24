@@ -1,6 +1,6 @@
 {
   "name": "latest-flutter-version-action",
-  "version": "1.3.2",
+  "version": "1.0.2",
   "private": true,
   "description": "Outputs information about the latest Flutter version",
   "main": "lib/index.js",

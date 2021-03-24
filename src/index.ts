@@ -7,7 +7,7 @@ async function run() {
 
     if (channel == 'master') {
       core.setFailed(
-        'using `flutter-version` with master channel is not supported.',
+        'using `latest-flutter-version-action` with master channel is not supported.',
       );
 
       return;
@@ -15,6 +15,7 @@ async function run() {
 
     const platform = release.getPlatform();
 
+    core.info(`Searching for latest version in ${channel} channel`);
     const {
       version: selectedVersion,
       downloadUrl,
@@ -22,7 +23,7 @@ async function run() {
     } = await release.determineVersion('', channel, platform);
 
     core.info(
-      `Latest Flutter version in channel ${channel}: ${selectedVersion}`,
+      `Found version for ${channel} channel: ${selectedVersion}`,
     );
     core.setOutput('version', selectedVersion);
   } catch (error) {
