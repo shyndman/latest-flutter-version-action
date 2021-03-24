@@ -19,12 +19,11 @@ async function run() {
       version: selectedVersion,
       downloadUrl,
       channel: validatedChannel,
-    } = await release.determineVersion(
-      '',
-      channel,
-      platform,
-    );
+    } = await release.determineVersion('', channel, platform);
 
+    core.info(
+      `Latest Flutter version in channel ${channel}: ${selectedVersion}`,
+    );
     core.setOutput('version', selectedVersion);
   } catch (error) {
     core.setFailed(error.message);
