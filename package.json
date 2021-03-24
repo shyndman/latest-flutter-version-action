@@ -1,8 +1,8 @@
 {
-  "name": "flutter-action",
+  "name": "latest-flutter-version-action",
   "version": "1.3.2",
   "private": true,
-  "description": "Flutter environment for use in actions",
+  "description": "Outputs information about the latest Flutter version",
   "main": "lib/index.js",
   "scripts": {
     "build-tsc": "tsc",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/subosito/flutter-action.git"
+    "url": "git+https://github.com/shyndman/latest-flutter-version-action.git"
   },
   "keywords": [
     "actions",
@@ -22,7 +22,10 @@
     "flutter",
     "setup"
   ],
-  "author": "Alif Rachmawadi <arch@subosito.com>",
+  "author": "Scott Hyndman <shyndman@madewithfelt.com>",
+  "contributors": [
+    "(Original work by) Alif Rachmawadi <arch@subosito.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",

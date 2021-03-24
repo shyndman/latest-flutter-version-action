@@ -1,17 +1,14 @@
-name: 'Flutter action'
-description: 'Setup your runner with Flutter environment'
-author: 'Alif Rachmawadi'
+name: 'Latest Flutter Version Action'
+description: 'Outputs information about the latest Flutter version in a channel.'
+author: 'Scott Hyndman'
 inputs:
-  flutter-version:
-    description: 'The Flutter version to make available on the path'
-    required: false
   channel:
     description: 'The Flutter build release channel'
     required: false
     default: 'stable'
+outputs:
+  version:
+    description: The Flutter version's version string (no v prefix)
 runs:
   using: 'node12'
   main: 'dist/index.js'
-branding:
-  icon: 'maximize'
-  color: 'blue'
