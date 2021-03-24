@@ -8,7 +8,7 @@ inputs:
     default: 'stable'
 outputs:
   version:
-    description: The Flutter version's version string (no v prefix)
+    description: 'The Flutter version\'s version string (no v prefix)'
 runs:
   using: 'node12'
   main: 'dist/index.js'
